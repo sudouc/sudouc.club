@@ -1,0 +1,20 @@
+plugins:
+    - jekyll-seo-tag
+    - jekyll-sitemap
+
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - gulpfile.babel.js
+    - LICENSE.md
+    - node_modules
+    - package.json
+    - package-lock.json
+    - README.md
+    - src
+    - tailwind.config.js
+    - netlify.toml
+
+url: https://sudouc.club
+title: Sudo UC
+logo: /favicon.ico
