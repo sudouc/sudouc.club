@@ -14,6 +14,7 @@ exclude:
     - src
     - tailwind.config.js
     - netlify.toml
+    - docs
 
 url: https://sudouc.club
 title: Sudo UC
