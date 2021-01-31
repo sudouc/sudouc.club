@@ -1,0 +1,17 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-18 lg:px-8">
+    <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
+        <div>
+            <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4x bg-l">
+                Upcomming Events
+            </h2>
+            <p class="mt-3 text-xl text-gray-500 sm:mt-4">
+                Take a sneak peak a what we have planned.
+            </p>
+        </div>
+        <div class="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+            {% include card.html link="#" when="11<sup>th</sup> February @ 4:30" type="Byte Sized" color="bg-purple-100 text-purple-800" title="Byte Sized: The Essentials" description="Discover the essential tools you will require as a developer and discover neat tricks you can used everywhere. We'll be uncovering the mysteries of Git and how to set up VSCode for your daily works.<br><br>Oh and the Engineering Society will be there too..." %}
+            {% include card.html link="#" when="18<sup>th</sup> February @ 4:30" type="Projects & Pizza" color="bg-yellow-100 text-yellow-800" title="Project & Pizza" description="Hang out with Sudo to show off something you've created, discover a new passion project or just to enjoy some Pizza!" %}
+        </div>
+    </div>
+</div>

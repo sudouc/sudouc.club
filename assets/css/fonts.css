@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'CircularStd-Book';
+    src: url('/assets/fonts/CircularStd-Book.eot') format('eot'),
+        url('/assets/fonts/CircularStd-Book.woff') format('woff'),
+        url('/assets/fonts/CircularStd-Book.ttf') format('truetype'),
+        url('/assets/fonts/CircularStd-Book.svg') format('svg');
+}
+@font-face {
+    font-family: 'CircularStd-Medium';
+    src: url('/assets/fonts/CircularStd-Medium.eot') format('eot'),
+        url('/assets/fonts/CircularStd-Medium.woff') format('woff'),
+        url('/assets/fonts/CircularStd-Medium.ttf') format('truetype'),
+        url('/assets/fonts/CircularStd-Medium.svg') format('svg');
+}
+@font-face {
+    font-family: 'CircularStd-Bold';
+    src: url('/assets/fonts/CircularStd-Bold.eot') format('eot'),
+        url('/assets/fonts/CircularStd-Bold.woff') format('woff'),
+        url('/assets/fonts/CircularStd-Bold.ttf') format('truetype'),
+        url('/assets/fonts/CircularStd-Bold.svg') format('svg');
+}
+@font-face {
+    font-family: 'CircularStd-Black';
+    src: url('/assets/fonts/CircularStd-Black.eot') format('eot'),
+        url('/assets/fonts/CircularStd-Black.woff') format('woff'),
+        url('/assets/fonts/CircularStd-Black.ttf') format('truetype'),
+        url('/assets/fonts/CircularStd-Black.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Camphor-Bold';
+    src: url('/assets/fonts/Camphor-Bold.eot') format('eot'),
+        url('/assets/fonts/Camphor-Bold.woff') format('woff'),
+        url('/assets/fonts/Camphor-Bold.ttf') format('truetype'),
+        url('/assets/fonts/Camphor-Bold.svg') format('svg');
+}
+@font-face {
+    font-family: 'Camphor-Italic';
+    src: url('/assets/fonts/Camphor-Italic.eot') format('eot'),
+        url('/assets/fonts/Camphor-Italic.woff') format('woff'),
+        url('/assets/fonts/Camphor-Italic.ttf') format('truetype'),
+        url('/assets/fonts/Camphor-Italic.svg') format('svg');
+}
+@font-face {
+    font-family: 'Camphor-Medium';
+    src: url('/assets/fonts/Camphor-Medium.eot') format('eot'),
+        url('/assets/fonts/Camphor-Medium.woff') format('woff'),
+        url('/assets/fonts/Camphor-Medium.ttf') format('truetype'),
+        url('/assets/fonts/Camphor-Medium.svg') format('svg');
+}
+@font-face {
+    font-family: 'Camphor-Regular';
+    src: url('/assets/fonts/Camphor-Regular.eot') format('eot'),
+        url('/assets/fonts/Camphor-Regular.woff') format('woff'),
+        url('/assets/fonts/Camphor-Regular.ttf') format('truetype'),
+        url('/assets/fonts/Camphor-Regular.svg') format('svg');
+}
