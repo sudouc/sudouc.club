@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       extrabold: ['CircularStd-Black'],
+      bold: ['CircularStd-Bold'],
       serif: ['Camphor-Medium']
     },
     extend: {},
