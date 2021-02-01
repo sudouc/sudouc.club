@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://sudouc.club/events/</loc>
+</url>
+<url>
 <loc>https://sudouc.club/</loc>
 </url>
 <url>
-<loc>https://sudouc.club/events/</loc>
+<loc>https://sudouc.club/emails/welcome.html</loc>
 </url>
 <url>
 <loc>https://sudouc.club/discord.html</loc>
