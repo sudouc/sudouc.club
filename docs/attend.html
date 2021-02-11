@@ -43,59 +43,146 @@
   </div>
 </div>
 <div class="bg-white py-16 sm:py-24">
-    <div class="relative sm:py-16">
-        <div aria-hidden="true" class="hidden sm:block">
-            <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50 rounded-r-3xl"></div>
-            <svg class="absolute top-8 left-1/2 -ml-3" width="404" height="392" fill="none" viewBox="0 0 404 392">
-                <defs>
-                    <pattern id="8228f071-bcee-4ec8-905a-2a059a2cc4fb" x="0" y="0" width="20" height="20"
-                        patternUnits="userSpaceOnUse">
-                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-                    </pattern>
-                </defs>
-                <rect width="404" height="392" fill="url(#8228f071-bcee-4ec8-905a-2a059a2cc4fb)" />
-            </svg>
-        </div>
+    <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Event Attendance Register
+      </h2>
+    <div class="relative">
         <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-            <div class="relative rounded-2xl px-6 py-10 bg-indigo-600 overflow-hidden shadow-xl sm:px-12 sm:py-20">
-                <div aria-hidden="true" class="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0">
-                    <svg class="absolute inset-0 h-full w-full" preserveAspectRatio="xMidYMid slice"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1463 360">
-                        <path class="text-indigo-500 text-opacity-40" fill="currentColor"
-                            d="M-82.673 72l1761.849 472.086-134.327 501.315-1761.85-472.086z" />
-                        <path class="text-indigo-700 text-opacity-40" fill="currentColor"
-                            d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z" />
-                    </svg>
+            <div class="relative rounded-2xl px-6 py-10 overflow-hidden shadow-xl sm:px-12 sm:py-20">
+                <form class="space-y-8 divide-y divide-gray-200"
+    action="https://script.google.com/macros/s/AKfycbzTa8BRJ5P_bqH-43ybrVdgpXlkavFrzdh6LN5QFIXsCoHreRwvPCvE7Q/exec"
+    method="GET">
+    <div class="pt-4 space-y-6 sm:pt-5 sm:space-y-5">
+        <div>
+            <h3 class="text-lg leading-6 font-medium text-gray-900">
+                Event Attendance Register
+            </h3>
+            <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                Registration is essential for in-person attendance at all events in accordance with University and
+                Government policy.<br>
+                Attendance information is collected in accordance with the University of Canberra Privacy Policy.
+            </p>
+        </div>
+        <div class="space-y-6 sm:space-y-5">
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                <label for="FullName" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                    Full Name
+                </label>
+                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                    <input type="text" name="FullName" id="FullName" autocomplete="name" required
+                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
                 </div>
-                <div class="relative">
-                    <div class="sm:text-center">
-                        <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
-                            Sign up for our newsletter
-                        </h2>
-                        <p class="mt-6 mx-auto max-w-2xl text-lg text-indigo-200">
-                            Keep up to date on the latest events, news and other society information from Sudo
-                        </p>
+            </div>
+
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                <label for="Phone" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                    Phone Number
+                </label>
+                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                    <input type="text" name="Phone" id="Phone" autocomplete="tel" required
+                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                </div>
+            </div>
+
+
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                <label for="Email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                    Email address
+                </label>
+                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                    <input id="Email" name="Email" type="email" autocomplete="email" required
+                        class="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+                </div>
+            </div>
+
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                <label for="StudentNumber" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                    Student Number
+                </label>
+                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                    <input type="text" name="StudentNumber" id="StudentNumber"
+                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                </div>
+            </div>
+
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                <label for="ArrivalTime" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                    Arrival Time
+                </label>
+                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                    <input type="text" name="ArrivalTime" id="ArrivalTime" autocomplete="none"
+                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                </div>
+            </div>
+
+            <div class="pt-6 sm:pt-5 sm:border-t sm:border-gray-200">
+                <div role="group" aria-labelledby="label-notifications">
+                    <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
+                        <div>
+                            <div class="text-base font-medium text-gray-900 sm:text-sm sm:text-gray-700"
+                                id="label-notifications">
+                                Symptoms & Travel
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <div class="max-w-lg">
+                                <p class="text-sm text-gray-500">
+                                    In the previous 14 days, have you:
+                                </p>
+                                <ul class="text-sm text-gray-500">
+                                    <li>· Had any COVID-19 symptoms?</li>
+                                    <li>· Been in contact
+                                        with any confirmed/suspected COVID-19 case?</li>
+                                    <li>· Travelled internationally?</li>
+                                </ul>
+                                <div class="mt-4 space-y-4">
+                                    <div class="flex items-center">
+                                        <input id="sympYes" name="Symptoms" type="radio" value="Y"
+                                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                        <label for="sympYes" class="ml-3 block text-sm font-medium text-gray-700">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input id="sympNo" name="Symptoms" type="radio" value="N"
+                                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                        <label for="sympNo" class="ml-3 block text-sm font-medium text-gray-700">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <form
-                        action="https://sudo.us15.list-manage.com/subscribe/post?u=d72e53e6bf91a0efa9b3272c5&amp;id=b3e6962480"
-                        method="post" name="mc-embedded-subscribe-form" target="_blank"
-                        class="mt-12 sm:mx-auto sm:max-w-lg sm:flex" novalidate>
-                        <div class="min-w-0 flex-1">
-                            <label for="cta_email" class="sr-only">Email address</label>
-                            <input id="cta_email" type="email" name="EMAIL" autocomplete="email" required
-                                class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
-                                placeholder="Enter your email">
-                        </div>
-                        <div class="mt-4 sm:mt-0 sm:ml-3">
-                            <button type="submit"
-                                class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
-                                ame="subscribe">Notify
-                                me</button>
-                        </div>
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                name="b_d72e53e6bf91a0efa9b3272c5_b3e6962480" tabindex="-1" value=""></div>
-                    </form>
                 </div>
+            </div>
+
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
+                <label for="SymptomDetails" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                    If yes, provide details:
+                </label>
+                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                    <input type="text" name="SymptomDetails" id="SymptomDetails" autocomplete="none"
+                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="hidden">
+        <input type="text" name="FormId" value="SCR">
+    </div>
+
+    <div class="pt-5">
+        <div class="flex justify-start">
+            <button type="submit" id="form_submit"
+                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Submit
+            </button>
+        </div>
+    </div>
+</form>
             </div>
         </div>
     </div>
