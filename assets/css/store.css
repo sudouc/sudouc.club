@@ -1,0 +1,7 @@
+.store_card:nth-child(2n) > :nth-child(2n) > section{
+    margin-right: 40%;
+}
+
+.store_card:nth-child(2n) > :nth-child(odd) > section{
+    margin-left: 40%;
+}
