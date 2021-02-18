@@ -1,10 +1,8 @@
-<form class="space-y-8 divide-y divide-gray-200"
-    action="https://script.google.com/macros/s/AKfycbzTa8BRJ5P_bqH-43ybrVdgpXlkavFrzdh6LN5QFIXsCoHreRwvPCvE7Q/exec"
-    method="GET">
+<form class="space-y-8 divide-y divide-gray-200" onsubmit="event.preventDefault();submitForm();">
     <div class="pt-4 space-y-6 sm:pt-5 sm:space-y-5">
         <div>
             <h3 class="text-lg leading-6 font-medium text-gray-900">
-                Event Attendance Register
+                Welcome to <span id="EventNameTitle">Sudo</span>
             </h3>
             <p class="mt-1 max-w-2xl text-sm text-gray-500">
                 Registration is essential for in-person attendance at all events in accordance with University and
@@ -60,6 +58,16 @@
                 </label>
                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                     <input type="text" name="ArrivalTime" id="ArrivalTime" autocomplete="none"
+                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                </div>
+            </div>
+
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                <label for="EventName" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                    Event Name
+                </label>
+                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                    <input type="text" name="EventName" id="EventName" autocomplete="none"
                         class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
                 </div>
             </div>
@@ -132,3 +140,124 @@
         </div>
     </div>
 </form>
+
+<script type="text/javascript">
+    // Get window variables
+    var getUrl = window.location;
+    var baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
+
+    // Get Query params
+    let queryString = getUrl.search;
+    let urlParams = new URLSearchParams(queryString);
+
+    const eventName = decodeURI(urlParams.get('event'));
+    const currentTime = decodeURI(urlParams.get('time'));
+    const fsuid = decodeURI(urlParams.get('fsuid'));
+
+    if (eventName != "null") {
+        document.getElementById('EventName').value = eventName;
+        document.getElementById('EventNameTitle').innerHTML = eventName;
+        document.getElementById('EventName').readOnly = true;
+    }
+
+    if (currentTime != "null") {
+        document.getElementById('ArrivalTime').value = currentTime;
+        document.getElementById('ArrivalTime').readOnly = true;
+    }
+
+    function getFormValue(id) {
+        return document.getElementById(id).value;
+    }
+
+    /****** STORE DATA FOR NEXT TIME ******/
+    function getAttendFormData() {
+        // Read symptoms radio button
+        let hasSymp = undefined;
+        if (document.getElementById('sympNo').checked) hasSymp = false;
+        if (document.getElementById('sympYes').checked) hasSymp = true;
+
+        let formData = {
+            fullName: getFormValue('FullName'),
+            phoneNumber: getFormValue('Phone'),
+            emailAddress: getFormValue('Email'),
+            studentNumber: getFormValue('StudentNumber'),
+            arrivalTime: getFormValue('ArrivalTime'),
+            eventName: getFormValue('EventName'),
+            symptoms: hasSymp,
+            symptomsDetails: getFormValue('SymptomDetails')
+        };
+
+        return formData;
+    }
+
+    function loadInformation() {
+        let savedObj = localStorage.getItem('sudoAttendObj');
+        if (savedObj == null) return null;
+        else {
+            console.log('Loading Saved Data:', savedObj);
+
+            // Parse JSON payload
+            let retObj = JSON.parse(savedObj);
+            return retObj;
+        }
+    }
+
+    function storeInformation() {
+        let formData = getAttendFormData();
+        let newDataObj = {
+            fullName: formData.fullName,
+            phoneNumber: formData.phoneNumber,
+            emailAddress: formData.emailAddress,
+            studentNumber: formData.studentNumber
+        };
+
+        let jsonDataObj = JSON.stringify(newDataObj);
+
+        console.log('Storing:', jsonDataObj);
+        localStorage.setItem('sudoAttendObj', jsonDataObj);
+    }
+
+    function submitForm() {
+        let formData = getAttendFormData();
+        let submitBaseUrl = 'https://script.google.com/macros/s/AKfycbzTa8BRJ5P_bqH-43ybrVdgpXlkavFrzdh6LN5QFIXsCoHreRwvPCvE7Q/exec';
+
+        let submitFormData = submitBaseUrl + '?FullName=' + formData.fullName
+         + '&Phone=' + encodeURI(formData.phoneNumber)
+         + '&Email=' + encodeURI(formData.emailAddress)
+         + '&StudentNumber=' + encodeURI(formData.studentNumber)
+         + '&ArrivalTime=' + encodeURI(formData.arrivalTime)
+         + '&EventName=' + encodeURI(formData.eventName)
+         + '&Symptoms=' + encodeURI(formData.symptoms)
+         + '&SymptomDetails=' + encodeURI(formData.symptomsDetails)
+         + '&fsuid=' + encodeURI(fsuid);
+
+        console.log('Submitting:', submitFormData);
+        storeInformation();
+
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", submitFormData, true); // false for synchronous request
+        xmlHttp.send();
+        alert('Thanks for registering!');
+    }
+
+    function resetFormElement(id, val) {
+        if (val == undefined) val = '';
+        document.getElementById(id).value = val;
+    }
+
+    function resetForm() {
+        resetFormElement('FullName');
+        resetFormElement('Phone');
+        resetFormElement('Email');
+        resetFormElement('StudentNumber');
+        resetFormElement('SymptomDetails');
+    }
+
+    function prefillFormTest() {
+        resetFormElement('FullName', 'Test Name');
+        resetFormElement('Phone', '045551234');
+        resetFormElement('Email', 'test@sudouc.club');
+        resetFormElement('StudentNumber', 'u123456');
+        resetFormElement('SymptomDetails', 'None');
+    }
+</script>
