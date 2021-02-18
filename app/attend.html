@@ -19,7 +19,7 @@ layout: min
             <div class="grid grid-rows-2 grid-cols-1">
                 <div class="row-span-1 pt-10">
                     <h1 class="text-5xl font-extrabold text-gray-900 text-center" id="modal-headline">
-                        Welcome to Projects & Pizza
+                        Welcome to <span id="eventName">Sudo</span>
                     </h1>
                     <p class="text-gray-700 text-base text-center pt-2">
                         Please scan below to register your attendance
@@ -34,9 +34,18 @@ layout: min
 </div>
 
 <script type="text/javascript">
-
+    // Get window variables
     var getUrl = window.location;
     var baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
+
+    // Get Query params
+    let queryString = getUrl.search;
+    let urlParams = new URLSearchParams(queryString);
+
+    const event = urlParams.get('event')
+    console.log('Event Name:', event);
+
+    document.getElementById("eventName").innerHTML = decodeURI(event);
 
     var qrcode = new QRCode(document.getElementById("qrcode"), {
         text: baseUrl + "attend",
@@ -47,10 +56,15 @@ layout: min
         correctLevel: QRCode.CorrectLevel.H
     });
 
-    var updateQRInterval = 5000;
+    var updateQRInterval = 30000;
     function updateQR() {
         // Update QR Code
-        let updateLink = baseUrl + "attend?test=" + Math.random();
+        let updateLink =
+            baseUrl +
+            "attend?event=" + encodeURI(event) +
+            "&time=" + encodeURI(new Date().toISOString()) +
+            "&fsuid=" + Math.random().toString(5).substr(2, 5);
+
         console.log('Generating new link:', updateLink);
         qrcode.makeCode(updateLink);
 
