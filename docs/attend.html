@@ -50,7 +50,9 @@
     <div class="relative">
         <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
             <div class="relative rounded-2xl px-6 py-10 overflow-hidden shadow-xl sm:px-12 sm:py-20">
-                <form class="space-y-8 divide-y divide-gray-200" onsubmit="event.preventDefault();submitForm();">
+                <form class="space-y-8 divide-y divide-gray-200"
+    action="https://script.google.com/macros/s/AKfycbzTa8BRJ5P_bqH-43ybrVdgpXlkavFrzdh6LN5QFIXsCoHreRwvPCvE7Q/exec"
+    method="GET">
     <div class="pt-4 space-y-6 sm:pt-5 sm:space-y-5">
         <div>
             <h3 class="text-lg leading-6 font-medium text-gray-900">
@@ -165,6 +167,9 @@
                     </div>
                 </div>
             </div>
+            <div style="display:none;">
+                <input type="text" id="fsuid" name="fsuid" value="NULL">
+            </div>
 
             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
                 <label for="SymptomDetails" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
@@ -185,9 +190,13 @@
 
     <div class="pt-5">
         <div class="flex justify-start">
-            <button type="submit" id="form_submit"
+            <button type="submit" id="form_submit" onclick="saveFormData()"
                 class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 Submit
+            </button>
+            <button onclick="resetForm();saveFormData();"
+                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-indigo-600 bg-gray-100 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Reset
             </button>
         </div>
     </div>
@@ -215,6 +224,18 @@
     if (currentTime != "null") {
         document.getElementById('ArrivalTime').value = currentTime;
         document.getElementById('ArrivalTime').readOnly = true;
+    }
+
+    if(fsuid != "null") {
+        document.getElementById('fsuid').value = fsuid;
+    }
+
+    let info = loadInformation();
+    if(info != null) {
+        resetFormElement('FullName', info.fullName);
+        resetFormElement('Phone', info.phoneNumber);
+        resetFormElement('Email', info.emailAddress);
+        resetFormElement('StudentNumber', info.studentNumber);
     }
 
     function getFormValue(id) {
@@ -274,14 +295,14 @@
         let submitBaseUrl = 'https://script.google.com/macros/s/AKfycbzTa8BRJ5P_bqH-43ybrVdgpXlkavFrzdh6LN5QFIXsCoHreRwvPCvE7Q/exec';
 
         let submitFormData = submitBaseUrl + '?FullName=' + formData.fullName
-         + '&Phone=' + encodeURI(formData.phoneNumber)
-         + '&Email=' + encodeURI(formData.emailAddress)
-         + '&StudentNumber=' + encodeURI(formData.studentNumber)
-         + '&ArrivalTime=' + encodeURI(formData.arrivalTime)
-         + '&EventName=' + encodeURI(formData.eventName)
-         + '&Symptoms=' + encodeURI(formData.symptoms)
-         + '&SymptomDetails=' + encodeURI(formData.symptomsDetails)
-         + '&fsuid=' + encodeURI(fsuid);
+            + '&Phone=' + encodeURI(formData.phoneNumber)
+            + '&Email=' + encodeURI(formData.emailAddress)
+            + '&StudentNumber=' + encodeURI(formData.studentNumber)
+            + '&ArrivalTime=' + encodeURI(formData.arrivalTime)
+            + '&EventName=' + encodeURI(formData.eventName)
+            + '&Symptoms=' + encodeURI(formData.symptoms)
+            + '&SymptomDetails=' + encodeURI(formData.symptomsDetails)
+            + '&fsuid=' + encodeURI(fsuid);
 
         console.log('Submitting:', submitFormData);
         storeInformation();
@@ -290,6 +311,10 @@
         xmlHttp.open("GET", submitFormData, true); // false for synchronous request
         xmlHttp.send();
         alert('Thanks for registering!');
+    }
+
+    function saveFormData() {
+        storeInformation();
     }
 
     function resetFormElement(id, val) {
