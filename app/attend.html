@@ -44,9 +44,8 @@ layout: min
     let queryString = getUrl.search;
     let urlParams = new URLSearchParams(queryString);
 
-    var event = urlParams.get('event')
+    var event = urlParams.get('event') ?? "Sudo";
     console.log('Event Name:', event);
-
     
     const eventNameTag = document.getElementById("eventName");
     eventNameTag.innerHTML = decodeURI(event);
