@@ -44,10 +44,26 @@ layout: min
     let queryString = getUrl.search;
     let urlParams = new URLSearchParams(queryString);
 
-    const event = urlParams.get('event')
+    var event = urlParams.get('event')
     console.log('Event Name:', event);
 
-    document.getElementById("eventName").innerHTML = decodeURI(event);
+    
+    const eventNameTag = document.getElementById("eventName");
+    eventNameTag.innerHTML = decodeURI(event);
+
+    eventNameTag.addEventListener('dblclick', function(e) {
+        let prompt = window.prompt("Enter Event Name", "Byte Sized: ");
+
+        if(prompt == null || prompt == "") {
+            // Ignore
+        }
+        else {
+            event = prompt;
+            eventNameTag.innerHTML = decodeURI(event);
+            updateQR(false);
+        }
+    })
+
 
     var qrcode = new QRCode(document.getElementById("qrcode"), {
         text: baseUrl + "attend",
@@ -59,7 +75,7 @@ layout: min
     });
 
     var updateQRInterval = 30000;
-    function updateQR() {
+    function updateQR(timer = true) {
         // Update QR Code
         let updateLink =
             baseUrl +
@@ -72,7 +88,7 @@ layout: min
         document.getElementById('qrcode_href').href = updateLink;
 
         // Recursive Function
-        setTimeout(updateQR, updateQRInterval);
+        if(timer) setTimeout(updateQR, updateQRInterval);
     }
-    updateQR();
+    updateQR(true);
 </script>
