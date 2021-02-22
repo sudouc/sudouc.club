@@ -243,14 +243,14 @@
         let submitBaseUrl = 'https://script.google.com/macros/s/AKfycbzTa8BRJ5P_bqH-43ybrVdgpXlkavFrzdh6LN5QFIXsCoHreRwvPCvE7Q/exec';
 
         let submitFormData = submitBaseUrl + '?FullName=' + formData.fullName
-            + '&Phone=' + encodeURI(formData.phoneNumber)
-            + '&Email=' + encodeURI(formData.emailAddress)
-            + '&StudentNumber=' + encodeURI(formData.studentNumber)
-            + '&ArrivalTime=' + encodeURI(formData.arrivalTime)
-            + '&EventName=' + encodeURI(formData.eventName)
-            + '&Symptoms=' + encodeURI(formData.symptoms)
-            + '&SymptomDetails=' + encodeURI(formData.symptomsDetails)
-            + '&fsuid=' + encodeURI(fsuid);
+            + '&Phone=' + encodeURIComponent(formData.phoneNumber)
+            + '&Email=' + encodeURIComponent(formData.emailAddress)
+            + '&StudentNumber=' + encodeURIComponent(formData.studentNumber)
+            + '&ArrivalTime=' + encodeURIComponent(formData.arrivalTime)
+            + '&EventName=' + encodeURIComponent(formData.eventName)
+            + '&Symptoms=' + encodeURIComponent(formData.symptoms)
+            + '&SymptomDetails=' + encodeURIComponent(formData.symptomsDetails)
+            + '&fsuid=' + encodeURIComponent(fsuid);
 
         console.log('Submitting:', submitFormData);
         storeInformation();
