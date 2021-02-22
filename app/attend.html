@@ -5,27 +5,29 @@ layout: min
 
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="fixed z-10 inset-0 overflow-y-auto">
-    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div class="absolute inset-0 bg-indigo-700 opacity-75"></div>
+            <!--<div class="absolute inset-0 bg-indigo-700 opacity-75"></div>-->
+            <img class="h-full w-full object-cover" src="/assets/media/backgrop_grad_purple.png"
+                            alt="Background images">
         </div>
 
         <!-- This element is to trick the browser into centering the modal contents. -->
         <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
 
-        <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:p-6"
+        <div class="inline-block align-middle bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:p-6"
             role="dialog" aria-modal="true" aria-labelledby="modal-headline">
 
-            <div class="grid grid-rows-2 grid-cols-1">
-                <div class="row-span-1 pt-10">
+            <div class="flex flex-wrap sm:flex-nowrap">
+                <div class="m-auto py-5 px-2 sm:py-1">
                     <h1 class="text-5xl font-extrabold text-gray-900 text-center" id="modal-headline">
-                        Welcome to <span id="eventName">Sudo</span>
+                        Welcome to <span id="eventName" class="text-indigo-600">Sudo</span>
                     </h1>
                     <p class="text-gray-700 text-base text-center pt-2">
-                        Please scan below to register your attendance
+                        Scan the QR code to register your attendance
                     </p>
                 </div>
-                <div class="row-span-1">
+                <div class="m-auto py-5 px-2 sm:py-1">
                     <a id="qrcode_href" href="#"><div class="flex justify-center" id="qrcode"></div></a>
                 </div>
             </div>
