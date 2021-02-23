@@ -21,7 +21,8 @@
 </head>
 
 <body>
-    <div class="mt-10 -nb-10">
+    <script src="/app/attend.js"></script>
+<div class="mt-10 -nb-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
       <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
@@ -43,301 +44,205 @@
     </nav>
   </div>
 </div>
-<div class="bg-white py-16 sm:py-24">
-    <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
-        Event Attendance Register
-      </h2>
-    <div class="relative">
+<div class="bg-white py-8">
+    <div id="formContainer" class="relative">
+        <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Event Attendance Register
+        </h2>
         <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
             <div class="relative rounded-2xl px-6 py-10 overflow-hidden shadow-xl sm:px-12 sm:py-20">
                 <form class="space-y-8 divide-y divide-gray-200"
-    action="https://script.google.com/macros/s/AKfycbzTa8BRJ5P_bqH-43ybrVdgpXlkavFrzdh6LN5QFIXsCoHreRwvPCvE7Q/exec"
-    method="GET">
-    <div class="pt-4 space-y-6 sm:pt-5 sm:space-y-5">
-        <div>
-            <h3 class="text-lg leading-6 font-medium text-gray-900">
-                Welcome to <span id="EventNameTitle">Sudo</span>
-            </h3>
-            <p class="mt-1 max-w-2xl text-sm text-gray-500">
-                Registration is essential for in-person attendance at all events in accordance with University and
-                Government policy.<br>
-                Attendance information is collected in accordance with the University of Canberra Privacy Policy.
-            </p>
-        </div>
-        <div class="space-y-6 sm:space-y-5">
-            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                <label for="FullName" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                    Full Name
-                </label>
-                <div class="mt-1 sm:mt-0 sm:col-span-2">
-                    <input type="text" name="FullName" id="FullName" autocomplete="name" required
-                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                </div>
-            </div>
-
-            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                <label for="Phone" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                    Phone Number
-                </label>
-                <div class="mt-1 sm:mt-0 sm:col-span-2">
-                    <input type="text" name="Phone" id="Phone" autocomplete="tel" required
-                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                </div>
-            </div>
-
-
-            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                <label for="Email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                    Email address
-                </label>
-                <div class="mt-1 sm:mt-0 sm:col-span-2">
-                    <input id="Email" name="Email" type="email" autocomplete="email" required
-                        class="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
-                </div>
-            </div>
-
-            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                <label for="StudentNumber" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                    Student Number
-                </label>
-                <div class="mt-1 sm:mt-0 sm:col-span-2">
-                    <input type="text" name="StudentNumber" id="StudentNumber"
-                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                </div>
-            </div>
-
-            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                <label for="ArrivalTime" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                    Arrival Time
-                </label>
-                <div class="mt-1 sm:mt-0 sm:col-span-2">
-                    <input type="text" name="ArrivalTime" id="ArrivalTime" autocomplete="none"
-                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                </div>
-            </div>
-
-            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                <label for="EventName" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                    Event Name
-                </label>
-                <div class="mt-1 sm:mt-0 sm:col-span-2">
-                    <input type="text" name="EventName" id="EventName" autocomplete="none"
-                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                </div>
-            </div>
-
-            <div class="pt-6 sm:pt-5 sm:border-t sm:border-gray-200">
-                <div role="group" aria-labelledby="label-notifications">
-                    <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
+                    action="https://script.google.com/macros/s/AKfycbzTa8BRJ5P_bqH-43ybrVdgpXlkavFrzdh6LN5QFIXsCoHreRwvPCvE7Q/exec"
+                    method="GET" id="attendanceForm">
+                    <div class="pt-4 space-y-6 sm:pt-5 sm:space-y-5">
                         <div>
-                            <div class="text-base font-medium text-gray-900 sm:text-sm sm:text-gray-700"
-                                id="label-notifications">
-                                Symptoms & Travel
-                            </div>
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                Welcome to <span id="EventNameTitle">Sudo</span>
+                            </h3>
+                            <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                                Registration is essential for in-person attendance at all events in accordance with
+                                University and
+                                Government policy.<br>
+                                Attendance information is collected in accordance with the University of Canberra
+                                Privacy Policy.
+                            </p>
                         </div>
-                        <div class="sm:col-span-2">
-                            <div class="max-w-lg">
-                                <p class="text-sm text-gray-500">
-                                    In the previous 14 days, have you:
-                                </p>
-                                <ul class="text-sm text-gray-500">
-                                    <li>· Had any COVID-19 symptoms?</li>
-                                    <li>· Been in contact
-                                        with any confirmed/suspected COVID-19 case?</li>
-                                    <li>· Travelled internationally?</li>
-                                </ul>
-                                <div class="mt-4 space-y-4">
-                                    <div class="flex items-center">
-                                        <input id="sympYes" name="Symptoms" type="radio" value="Y"
-                                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
-                                        <label for="sympYes" class="ml-3 block text-sm font-medium text-gray-700">
-                                            Yes
-                                        </label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input id="sympNo" name="Symptoms" type="radio" value="N"
-                                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
-                                        <label for="sympNo" class="ml-3 block text-sm font-medium text-gray-700">
-                                            No
-                                        </label>
+                        <div class="space-y-6 sm:space-y-5">
+                            <div
+                                class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="FullName" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                                    Full Name
+                                </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                    <input type="text" name="FullName" id="FullName" autocomplete="name" required
+                                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                </div>
+                            </div>
+
+                            <div
+                                class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="Phone" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                                    Phone Number
+                                </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                    <input type="text" name="Phone" id="Phone" autocomplete="tel" required
+                                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                </div>
+                            </div>
+
+
+                            <div
+                                class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="Email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                                    Email address
+                                </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                    <input id="Email" name="Email" type="email" autocomplete="email" required
+                                        class="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+                                </div>
+                            </div>
+
+                            <div
+                                class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="StudentNumber"
+                                    class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                                    Student Number
+                                </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                    <input type="text" name="StudentNumber" id="StudentNumber"
+                                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                </div>
+                            </div>
+
+                            <div
+                                class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="ArrivalTime"
+                                    class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                                    Arrival Time
+                                </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                    <input type="text" name="ArrivalTime" id="ArrivalTime" autocomplete="none"
+                                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                </div>
+                            </div>
+
+                            <div
+                                class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="EventName" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                                    Event Name
+                                </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                    <input type="text" name="EventName" id="EventName" autocomplete="none"
+                                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                </div>
+                            </div>
+
+                            <div class="pt-6 sm:pt-5 sm:border-t sm:border-gray-200">
+                                <div role="group" aria-labelledby="label-notifications">
+                                    <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
+                                        <div>
+                                            <div class="text-base font-medium text-gray-900 sm:text-sm sm:text-gray-700"
+                                                id="label-notifications">
+                                                Symptoms & Travel
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <div class="max-w-lg">
+                                                <p class="text-sm text-gray-500">
+                                                    In the previous 14 days, have you:
+                                                </p>
+                                                <ul class="text-sm text-gray-500">
+                                                    <li>· Had any COVID-19 symptoms?</li>
+                                                    <li>· Been in contact
+                                                        with any confirmed/suspected COVID-19 case?</li>
+                                                    <li>· Travelled internationally?</li>
+                                                </ul>
+                                                <div class="mt-4 space-y-4">
+                                                    <div class="flex items-center">
+                                                        <input id="sympYes" name="Symptoms" type="radio" value="Y"
+                                                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                                                            required>
+                                                        <label for="sympYes"
+                                                            class="ml-3 block text-sm font-medium text-gray-700">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                    <div class="flex items-center">
+                                                        <input id="sympNo" name="Symptoms" type="radio" value="N"
+                                                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                                                            checked="checked" required>
+                                                        <label for="sympNo"
+                                                            class="ml-3 block text-sm font-medium text-gray-700">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div style="display:none;">
+                                <input type="text" id="fsuid" name="fsuid" value="NULL">
+                            </div>
+
+                            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
+                                <label for="SymptomDetails"
+                                    class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                                    If yes, provide details:
+                                </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                    <input type="text" name="SymptomDetails" id="SymptomDetails" autocomplete="none"
+                                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                </div>
-            </div>
-            <div style="display:none;">
-                <input type="text" id="fsuid" name="fsuid" value="NULL">
-            </div>
 
-            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
-                <label for="SymptomDetails" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                    If yes, provide details:
-                </label>
-                <div class="mt-1 sm:mt-0 sm:col-span-2">
-                    <input type="text" name="SymptomDetails" id="SymptomDetails" autocomplete="none"
-                        class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                </div>
-            </div>
+                    <div class="hidden">
+                        <input type="text" name="FormId" value="SCR">
+                    </div>
 
+                    <div class="pt-5">
+                        <div class="flex justify-start">
+                            <button type="submit" id="form_submit"
+                                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                Submit
+                            </button>
+                            <button id="resetForm_btn"
+                                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-indigo-600 bg-gray-100 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                Reset
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
-    <div class="hidden">
-        <input type="text" name="FormId" value="SCR">
-    </div>
+    <div id="returningContainer" style="display: none;"
+        class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="relative rounded-2xl px-6 py-10 overflow-hidden shadow-xl sm:px-12 sm:py-20 bg-indigo-600">
+            <h2 class="text-center text-3xl font-extrabold text-white sm:text-4xl">
+                Welcome back <span id="returnName"></span>!
+            </h2>
+            <p class="text-center mt-1 text-sm text-gray-100">
+                By signing in you acknowledge you haven't had any COVID-19 symptoms, been in contact with a confirmed/
+                suspected COVID-19 case or travelled internationally.
+            </p>
 
-    <div class="pt-5">
-        <div class="flex justify-start">
-            <button type="submit" id="form_submit" onclick="saveFormData()"
-                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                Submit
-            </button>
-            <button onclick="resetForm();saveFormData();"
-                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-indigo-600 bg-gray-100 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                Reset
-            </button>
-        </div>
-    </div>
-</form>
-
-<script type="text/javascript">
-    // Get window variables
-    var getUrl = window.location;
-    var baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
-
-    // Get Query params
-    let queryString = getUrl.search;
-    let urlParams = new URLSearchParams(queryString);
-
-    const eventName = decodeURI(urlParams.get('event'));
-    const currentTime = decodeURI(urlParams.get('time'));
-    const fsuid = decodeURI(urlParams.get('fsuid'));
-
-    if (eventName != "null") {
-        document.getElementById('EventName').value = eventName;
-        document.getElementById('EventNameTitle').innerHTML = eventName;
-        document.getElementById('EventName').readOnly = true;
-    }
-
-    if (currentTime != "null") {
-        document.getElementById('ArrivalTime').value = currentTime;
-        document.getElementById('ArrivalTime').readOnly = true;
-    }
-
-    if(fsuid != "null") {
-        document.getElementById('fsuid').value = fsuid;
-    }
-
-    let info = loadInformation();
-    if(info != null) {
-        resetFormElement('FullName', info.fullName);
-        resetFormElement('Phone', info.phoneNumber);
-        resetFormElement('Email', info.emailAddress);
-        resetFormElement('StudentNumber', info.studentNumber);
-    }
-
-    function getFormValue(id) {
-        return document.getElementById(id).value;
-    }
-
-    /****** STORE DATA FOR NEXT TIME ******/
-    function getAttendFormData() {
-        // Read symptoms radio button
-        let hasSymp = undefined;
-        if (document.getElementById('sympNo').checked) hasSymp = false;
-        if (document.getElementById('sympYes').checked) hasSymp = true;
-
-        let formData = {
-            fullName: getFormValue('FullName'),
-            phoneNumber: getFormValue('Phone'),
-            emailAddress: getFormValue('Email'),
-            studentNumber: getFormValue('StudentNumber'),
-            arrivalTime: getFormValue('ArrivalTime'),
-            eventName: getFormValue('EventName'),
-            symptoms: hasSymp,
-            symptomsDetails: getFormValue('SymptomDetails')
-        };
-
-        return formData;
-    }
-
-    function loadInformation() {
-        let savedObj = localStorage.getItem('sudoAttendObj');
-        if (savedObj == null) return null;
-        else {
-            console.log('Loading Saved Data:', savedObj);
-
-            // Parse JSON payload
-            let retObj = JSON.parse(savedObj);
-            return retObj;
-        }
-    }
-
-    function storeInformation() {
-        let formData = getAttendFormData();
-        let newDataObj = {
-            fullName: formData.fullName,
-            phoneNumber: formData.phoneNumber,
-            emailAddress: formData.emailAddress,
-            studentNumber: formData.studentNumber
-        };
-
-        let jsonDataObj = JSON.stringify(newDataObj);
-
-        console.log('Storing:', jsonDataObj);
-        localStorage.setItem('sudoAttendObj', jsonDataObj);
-    }
-
-    function submitForm() {
-        let formData = getAttendFormData();
-        let submitBaseUrl = 'https://script.google.com/macros/s/AKfycbzTa8BRJ5P_bqH-43ybrVdgpXlkavFrzdh6LN5QFIXsCoHreRwvPCvE7Q/exec';
-
-        let submitFormData = submitBaseUrl + '?FullName=' + formData.fullName
-            + '&Phone=' + encodeURI(formData.phoneNumber)
-            + '&Email=' + encodeURI(formData.emailAddress)
-            + '&StudentNumber=' + encodeURI(formData.studentNumber)
-            + '&ArrivalTime=' + encodeURI(formData.arrivalTime)
-            + '&EventName=' + encodeURI(formData.eventName)
-            + '&Symptoms=' + encodeURI(formData.symptoms)
-            + '&SymptomDetails=' + encodeURI(formData.symptomsDetails)
-            + '&fsuid=' + encodeURI(fsuid);
-
-        console.log('Submitting:', submitFormData);
-        storeInformation();
-
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", submitFormData, true); // false for synchronous request
-        xmlHttp.send();
-        alert('Thanks for registering!');
-    }
-
-    function saveFormData() {
-        storeInformation();
-    }
-
-    function resetFormElement(id, val) {
-        if (val == undefined) val = '';
-        document.getElementById(id).value = val;
-    }
-
-    function resetForm() {
-        resetFormElement('FullName');
-        resetFormElement('Phone');
-        resetFormElement('Email');
-        resetFormElement('StudentNumber');
-        resetFormElement('SymptomDetails');
-    }
-
-    function prefillFormTest() {
-        resetFormElement('FullName', 'Test Name');
-        resetFormElement('Phone', '045551234');
-        resetFormElement('Email', 'test@sudouc.club');
-        resetFormElement('StudentNumber', 'u123456');
-        resetFormElement('SymptomDetails', 'None');
-    }
-</script>
+            <div class="pt-5">
+                <div class="flex justify-center">
+                    <button type="submit" id="existingUserFlowSubmit_btn"
+                        class="ml-3 inline-flex justify-center py-2 px-4 border-transparent shadow-sm text-sm font-medium rounded-md border-white border-2 text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Sign me in!
+                    </button>
+                    <button id="changeSomething_btn"
+                        class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-indigo-600 bg-gray-100 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Change something
+                    </button>
+                </div>
             </div>
         </div>
     </div>
