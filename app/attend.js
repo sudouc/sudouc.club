@@ -56,7 +56,9 @@ window.onload = (event) => {
     };
 
     document.getElementById('form_submit').onclick = (event) => {
+        document.getElementById('form_submit').disabled = true
         saveFormData();
+        submitFormAction();
     }
 
     document.getElementById('existingUserFlowSubmit_btn').onclick = (event) => {
