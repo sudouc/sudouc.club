@@ -119,14 +119,11 @@ window.onload = (event) => {
     }
 
     function submitFormAction() {
-        //document.getElementById('attendanceForm').submit();
-        submitForm();
+        document.getElementById('attendanceForm').submit();
     }
 
     function submitForm() {
         let formData = getAttendFormData();
-        storeInformation();
-
         let submitBaseUrl = 'https://script.google.com/macros/s/AKfycbzTa8BRJ5P_bqH-43ybrVdgpXlkavFrzdh6LN5QFIXsCoHreRwvPCvE7Q/exec';
 
         let submitFormData = submitBaseUrl + '?FullName=' + formData.fullName
@@ -139,41 +136,13 @@ window.onload = (event) => {
             + '&SymptomDetails=' + encodeURIComponent(formData.symptomsDetails)
             + '&fsuid=' + encodeURIComponent(fsuid);
 
-        let formJson = {
-            Phone: encodeURIComponent(formData.phoneNumber),
-            Email: encodeURIComponent(formData.emailAddress),
-            StudentNumber: encodeURIComponent(formData.studentNumber),
-            ArrivalTime: encodeURIComponent(formData.arrivalTime),
-            EventName: encodeURIComponent(formData.eventName),
-            Symptoms: encodeURIComponent(formData.symptoms),
-            SymptomDetails: encodeURIComponent(formData.symptomsDetails),
-            fsuid: encodeURIComponent(fsuid)
-        };
+        console.log('Submitting:', submitFormData);
+        storeInformation();
 
-        postData(submitFormData, null);
-        console.log('Submitting:', formJson);
-    
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", submitFormData, true); // false for synchronous request
+        xmlHttp.send();
         alert('Thanks for registering!');
-    }
-
-    // Example POST method implementation:
-    async function postData(url = '', data = {}) {
-        // Default options are marked with *
-        const response = await fetch(url, {
-            method: 'GET', // *GET, POST, PUT, DELETE, etc.
-            mode: 'no-cors', // no-cors, *cors, same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'same-origin', // include, *same-origin, omit
-            headers: {
-                'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            redirect: 'follow', // manual, *follow, error
-            referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-            //body: JSON.stringify(data) // body data type must match "Content-Type" header
-        });
-        console.log('resp', response);
-        return response.json(); // parses JSON response into native JavaScript objects
     }
 
     function saveFormData() {
