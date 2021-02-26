@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Sudo - UC's Premiere Development and Coding Society
+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N573H6CT5L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N573H6CT5L');
+</script>
+</head>
+
+<body>
+    <script src="/assets/js/qrcode.js"></script>
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="fixed z-10 inset-0 overflow-y-auto">
+    <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:p-4">
+        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <!--<div class="absolute inset-0 bg-indigo-700 opacity-75"></div>-->
+            <img class="h-full w-full object-cover" src="/assets/media/backgrop_grad_purple.png"
+                            alt="Background images">
+        </div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+        <div class="inline-block align-middle bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:p-6"
+            role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+
+            <div class="flex flex-wrap sm:flex-nowrap">
+                <div class="m-auto py-5 px-2 sm:py-1">
+                    <h1 class="text-5xl font-extrabold text-gray-900 text-center" id="modal-headline">
+                        Welcome to <span id="eventName" class="text-indigo-600">Sudo</span>
+                    </h1>
+                    <p class="text-gray-700 text-base text-center pt-2">
+                        Scan the QR code to register your attendance
+                    </p>
+                </div>
+                <div class="m-auto py-5 px-2 sm:py-1">
+                    <a id="qrcode_href" href="#"><div class="flex justify-center" id="qrcode"></div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // Get window variables
+    var getUrl = window.location;
+    var baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
+
+    // Get Query params
+    let queryString = getUrl.search;
+    let urlParams = new URLSearchParams(queryString);
+
+    var event = urlParams.get('event') ?? "Sudo";
+    console.log('Event Name:', event);
+    
+    const eventNameTag = document.getElementById("eventName");
+    eventNameTag.innerHTML = decodeURI(event);
+
+    eventNameTag.addEventListener('dblclick', function(e) {
+        let prompt = window.prompt("Enter Event Name", "Byte Sized: ");
+
+        if(prompt == null || prompt == "") {
+            // Ignore
+        }
+        else {
+            event = prompt;
+            eventNameTag.innerHTML = decodeURI(event);
+            updateQR(false);
+        }
+    })
+
+
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: baseUrl + "attend",
+        width: 250,
+        height: 250,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+
+    var updateQRInterval = 30000;
+    function updateQR(timer = true) {
+        // Update QR Code
+        let updateLink =
+            baseUrl +
+            "attend?event=" + encodeURIComponent(event) +
+            "&time=" + encodeURIComponent(new Date().toISOString()) +
+            "&fsuid=" + Math.random().toString(5).substr(2, 5);
+
+        console.log('Generating new link:', updateLink);
+        qrcode.makeCode(updateLink);
+        document.getElementById('qrcode_href').href = updateLink;
+
+        // Recursive Function
+        if(timer) setTimeout(updateQR, updateQRInterval);
+    }
+    updateQR(true);
+</script>
+</body>
+
+</html>
