@@ -74,4 +74,11 @@ jobs:
           to: '+61422606216'
           twilio_account_sid: ${{ secrets.TWILIO_ACCOUNT_SID }}
           twilio_auth_token: ${{ secrets.TWILIO_AUTH_TOKEN }}
-            
+          
+      - name: Annoy people on Discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_GIT_WEBHOOK }}
+        uses: Ilshidur/action-discord@master
+        with:
+          args: 'There has been a new commit to {{ GITHUB_REPOSITORY }} and triggered the {{ GITHUB_WORKFLOW }} action. (Run ID {{ GITHUB_ACTION }})'
+        
