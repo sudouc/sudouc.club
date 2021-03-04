@@ -66,3 +66,12 @@ jobs:
           push: true
           branch: main
           message: 'Automatic build courtesy of Github (Sam and Jed are too lazy)'
+      - name: Call
+        uses: fabasoad/twilio-voice-call-action@main
+        with:
+          text: 'Automatic build of sudo website has completed.'
+          from: '+12012126629'
+          to: '+61422606216'
+          twilio_account_sid: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          twilio_auth_token: ${{ secrets.TWILIO_AUTH_TOKEN }}
+            
