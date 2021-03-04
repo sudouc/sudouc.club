@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://sudouc.club/app/attend.html</loc>
-</url>
-<url>
 <loc>https://sudouc.club/attend.html</loc>
 </url>
 <url>
-<loc>https://sudouc.club/app/attend_complete.html</loc>
+<loc>https://sudouc.club/app/forms/cb.html</loc>
+</url>
+<url>
+<loc>https://sudouc.club/app/attend/complete.html</loc>
 </url>
 <url>
 <loc>https://sudouc.club/events/</loc>
+</url>
+<url>
+<loc>https://sudouc.club/app/attend/</loc>
 </url>
 <url>
 <loc>https://sudouc.club/app/</loc>
@@ -22,14 +25,17 @@
 <loc>https://sudouc.club/newsletter.html</loc>
 </url>
 <url>
+<loc>https://sudouc.club/discord/verify.html</loc>
+</url>
+<url>
 <loc>https://sudouc.club/emails/welcome.html</loc>
 </url>
 <url>
-<loc>https://sudouc.club/discord.html</loc>
-<lastmod>2021-03-04T04:01:54+00:00</lastmod>
+<loc>https://sudouc.club/discord/</loc>
+<lastmod>2021-03-04T04:03:33+00:00</lastmod>
 </url>
 <url>
 <loc>https://sudouc.club/register.html</loc>
-<lastmod>2021-03-04T04:01:54+00:00</lastmod>
+<lastmod>2021-03-04T04:03:33+00:00</lastmod>
 </url>
 </urlset>
