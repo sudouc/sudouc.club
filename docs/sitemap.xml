@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://sudouc.club/attend.html</loc>
+<loc>https://sudouc.club/app/attend.html</loc>
 </url>
 <url>
-<loc>https://sudouc.club/app/attend.html</loc>
+<loc>https://sudouc.club/attend.html</loc>
 </url>
 <url>
 <loc>https://sudouc.club/app/attend_complete.html</loc>
@@ -13,10 +13,10 @@
 <loc>https://sudouc.club/events/</loc>
 </url>
 <url>
-<loc>https://sudouc.club/</loc>
+<loc>https://sudouc.club/app/</loc>
 </url>
 <url>
-<loc>https://sudouc.club/app/</loc>
+<loc>https://sudouc.club/</loc>
 </url>
 <url>
 <loc>https://sudouc.club/newsletter.html</loc>
@@ -26,10 +26,10 @@
 </url>
 <url>
 <loc>https://sudouc.club/discord.html</loc>
-<lastmod>2021-01-31T22:04:03+11:00</lastmod>
+<lastmod>2021-02-15T22:23:59+11:00</lastmod>
 </url>
 <url>
 <loc>https://sudouc.club/register.html</loc>
-<lastmod>2021-01-31T22:04:03+11:00</lastmod>
+<lastmod>2021-02-15T22:24:00+11:00</lastmod>
 </url>
 </urlset>
