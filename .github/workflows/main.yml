@@ -81,5 +81,5 @@ jobs:
           NEWLINE: "\n"
         uses: Ilshidur/action-discord@master
         with:
-          args: 'There has been a new commit to **{{ GITHUB_REPOSITORY }}**!{{ NEWLINE }} For more info, check it out at **{{ GITHUB_SERVER_URL }}** {{ NEWLINE }} {{ NEWLINE }} This message has been sent by the **{{ GITHUB_WORKFLOW }}** workflow!'
+          args: 'There has been a new commit to **{{ GITHUB_REPOSITORY }}**!{{ NEWLINE }} For more info, check it out at **{{ GITHUB_SERVER_URL }}{{ GITHUB_REPOSITORY }}** {{ NEWLINE }} {{ NEWLINE }} This message has been sent by the **{{ GITHUB_WORKFLOW }}** workflow!'
         
