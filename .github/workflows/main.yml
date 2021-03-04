@@ -52,12 +52,13 @@ jobs:
         run: npm run build
       
       - name: Remove Old Site
-        run: rm -rf $GITHUB_WORKSPACE/docs
+        run: rm -rf $GITHUB_WORKSPACE/docs/*
       
       - name: Copy New Site
-        run: mv $GITHUB_WORKSPACE/_site $GITHUB_WORKSPACE/docs
+        run: cp $GITHUB_WORKSPACE/_site/* $GITHUB_WORKSPACE/docs/
         
       - name: Commit changes
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: docs
