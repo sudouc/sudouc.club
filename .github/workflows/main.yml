@@ -55,7 +55,7 @@ jobs:
         run: rm -rf $GITHUB_WORKSPACE/docs/*
       
       - name: Copy New Site
-        run: cp $GITHUB_WORKSPACE/_site/* $GITHUB_WORKSPACE/docs/
+        run: cp -r $GITHUB_WORKSPACE/_site/* $GITHUB_WORKSPACE/docs/
         
       - name: Commit changes
         uses: actions-js/push@master
