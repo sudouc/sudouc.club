@@ -66,6 +66,7 @@ task("startServer", () => {
       "**/*.markdown",
       "!_site/**/*",
       "!node_modules/**/*",
+      "!ext_scripts/**/*"
     ],
     { interval: 500 },
     buildSite
