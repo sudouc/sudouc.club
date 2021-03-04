@@ -58,7 +58,11 @@ jobs:
         run: cp -r $GITHUB_WORKSPACE/_site/* $GITHUB_WORKSPACE/docs/
         
       - name: Commit changes
-        uses: actions-js/push@master
+        uses: EndBug/add-and-commit@v7
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          directory: ./docs
+          add: 'docs'
+          author_name: github_actions
+          author_email: github-actions@github.com
+          push: true
+          branch: master
+          message: 'Automatic build courtesy of Github'
