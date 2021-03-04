@@ -78,7 +78,8 @@ jobs:
       - name: Annoy people on Discord
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_GIT_WEBHOOK }}
+          NEWLINE: "\n"
         uses: Ilshidur/action-discord@master
         with:
-          args: 'There has been a new commit to **{{ GITHUB_REPOSITORY }}**! \r\n This message has been sent by the **{{ GITHUB_WORKFLOW }}** workflow!'
+          args: 'There has been a new commit to **{{ GITHUB_REPOSITORY }}**! {{ NEWLINE }} This message has been sent by the **{{ GITHUB_WORKFLOW }}** workflow!'
         
