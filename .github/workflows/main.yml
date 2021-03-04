@@ -64,5 +64,5 @@ jobs:
           author_name: github_actions
           author_email: github-actions@github.com
           push: true
-          branch: master
-          message: 'Automatic build courtesy of Github'
+          branch: main
+          message: 'Automatic build courtesy of Github (Sam and Jed are too lazy)'
