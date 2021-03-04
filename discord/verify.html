@@ -1,0 +1,55 @@
+---
+layout: min
+---
+<!--<script src="/app/attend/attend.js"></script>-->
+<div class="mt-10 -nb-10">
+    {% include titlebar.html %}
+</div>
+<div class="bg-white py-8">
+    <div id="formContainer" class="relative">
+        <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Discord Membership Verification
+        </h2>
+        <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="relative rounded-2xl px-6 py-10 overflow-hidden shadow-xl sm:px-12 sm:py-20">
+                <form class="space-y-8 divide-y divide-gray-200"
+                    action="https://script.google.com/macros/s/AKfycbzTa8BRJ5P_bqH-43ybrVdgpXlkavFrzdh6LN5QFIXsCoHreRwvPCvE7Q/exec"
+                    method="GET" id="attendanceForm">
+                    <div class="pt-4 space-y-6 sm:pt-5 sm:space-y-5">
+                        <div>
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                Verify you Discord username
+                            </h3>
+                            <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                                Become a verified member on our <a href="/discord" target="_blank">members discord</a>
+                            </p>
+                        </div>
+                        <div class="space-y-6 sm:space-y-5">
+                            {% include forms/text_input.html id="Identifier" name="Email or Student Number"
+                            placeholder="u34567890" required=true %}
+                            {% include forms/text_input.html id="DiscordUser" name="Discord Username"
+                            placeholder="user#1024" required=true %}
+
+
+                            <div style="display:none;">
+                                <input type="text" id="fsuid" name="fsuid" value="NULL">
+                                <input type="text" id="FormName" name="FormName" value="discord_verify">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5">
+                        <div class="flex justify-start">
+                            <button type="submit" id="form_submit"
+                                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}

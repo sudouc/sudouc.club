@@ -18,3 +18,27 @@ To push to GitHub pages (currently an ugly work around until we setup CI properl
 - Copy the output of `_site` to `docs`
 - Commit and push
 - GitHub Pages will use this output as the content for the site 
+
+## Contributing
+### Weekly Content Update
+*One day we will automate this process... - Jed 22/02/2021*  
+
+Start by checking out the `dev-weekly-update` branch the update the weeks content update with the following files:  
+
+| File | Description |
+| --- | --- |
+| _includes/events/poster.html | Update the Header, Description, Location (if required), event link |
+| _includes/events/future.html | Add any known new events as cards, remove past events |
+| _includes/events/past.html | Move past events here, link to write-up |
+| events/calendar.ics | Update the calendar with new events. Use a site like [ical.marudot.com](https://ical.marudot.com/) for easy editing. Make sure to set the update URL to `https://sudouc.club/events/calendar.ics` at the end. |
+| index.html | ~ line 65 you'll find the this weeks event tag, update it |
+
+Then run a build task and push! Changes get checked and merged.
+
+### TODO
+ - Make poster a dynamic element
+ - Move common weekly elements to a *shorts* folder for simplicity until the day we make an API
+ - Create write-ups on past events
+ - Create CI task for building site when pushed to `main`
+ - The Sudo Blog
+ - Move site to a PWA style and implement push notifications for event updates
