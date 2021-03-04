@@ -80,5 +80,5 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_GIT_WEBHOOK }}
         uses: Ilshidur/action-discord@master
         with:
-          args: 'There has been a new commit to {{ GITHUB_REPOSITORY }} and triggered the {{ GITHUB_WORKFLOW }} action. (Run ID {{ GITHUB_ACTION }})'
+          args: 'There has been a new commit to **{{ GITHUB_REPOSITORY }}**! \n This message has been sent by the **{{ GITHUB_WORKFLOW }}** workflow!'
         
