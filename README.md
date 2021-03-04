@@ -13,6 +13,12 @@ To begin you'll need to install and configure a few dependencies & build tools, 
   - `npm run start` to compile and launch BrowserSync and visit the dev site at `http://localhost:4000`
 
 ### Building for production
+The website should now automatically build and deploy when a new version merged or pushed into the Main branch.
+
+For more information on how this works, check the github actions associated with this project. Old instructions for building a production-ready version of the site are retained below, in case it's ever useful for someone.
+
+#### You should no longer need to do this when pushing to production - for manual builds only!
+
 Run `npm run build` to build the production version.  
 To push to GitHub pages (currently an ugly work around until we setup CI properly):
 - Copy the output of `_site` to `docs`
