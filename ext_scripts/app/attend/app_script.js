@@ -23,9 +23,8 @@ function doGet(request) {
     success: eOkay
   };
 
-  let retPayload = '<title>Redirecting...</title><meta content="0; url = ' + formCB + '"http-equiv=refresh><p>You should be redirected. If not click <a href="' + formCB + '">here</a>'
-
-  return HtmlService.createHtmlOutput(retPayload);
+  return HtmlService.createHtmlOutput(
+    "<title>Redirecting...</title><p>You should be redirected. If not click <a href='" + formCB + "'>here</a><script type='text/javascript'>window.top.location.href = '" + formCB + "';</script>");
 }
 
 
@@ -75,6 +74,13 @@ function applyCovidRegister(params) {
   return 'https://sudouc.club/app/attend/complete';
 }
 
+function testMail() {
+  MailApp.sendEmail("sudoexecutive@uni.canberra.edu.au",
+                  "sudoexecutive@uni.canberra.edu.au",
+                  "Test Mail",
+                  "This is an <strong>email</strong>");
+}
+
 function applyDiscordRegister(params) {
   var sheet = SpreadsheetApp.openById("1uVvHBaLgme7ylXEf0y6UVbsMEjkVF4mLHQy8FPiOhlw");
   var formTime = Utilities.formatDate(new Date(), "GMT+10", "dd/MM/yyyy HH:MM");
@@ -86,6 +92,16 @@ function applyDiscordRegister(params) {
   ];
 
   sheet.appendRow(sheetData);
+
+  // Send notification email
+  /*
+  MailApp.sendEmail({
+    to: "sudoexecutive@uni.canberra.edu.au",
+    subject: "New Discord Member Verification",
+    htmlBody: "Hey,<br> an alledged member <strong>" + params.Identifier.toString() + "</strong>, with the Discord username <strong>" + params.DiscordUser.toString() + "</strong> wants to be verified."
+  });
+  */
+  
 
   return 'https://sudouc.club/app/forms/cb?message=Your%20discord%20verification%20has%20been%20submitted%20successfully.%20An%20admin%20will%20update%20Discord%20shortly!';
 }
