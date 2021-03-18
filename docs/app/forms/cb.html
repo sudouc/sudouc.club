@@ -1,37 +1,41 @@
----
-layout: min
----
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Sudo - UC's Premiere Development and Coding Society
+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N573H6CT5L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<div class="app font-sans min-w-screen min-h-screen bg-grey-lighter py-8 px-4">
+  gtag('config', 'G-N573H6CT5L');
+</script>
+</head>
+
+<body>
+    <div class="app font-sans min-w-screen min-h-screen bg-grey-lighter py-8 px-4">
 
     <div class="mail__wrapper max-w-md mx-auto">
 
         <div class="mail__content bg-white p-8 shadow-md">
 
-            <div style="background-image: url('https://sudouc.club/assets/media/backgrop_grad_purple.png'); background-size: 100% 100%;"
+            <div style="background-image: url('https://sudouc.club/assets/media/backgrop_grad_greenyellow.png'); background-size: 100% 100%;"
                 class="content__header h-64 flex flex-col items-center justify-center text-center leading-normal bg-black -mx-8 -mt-8">
-                <h1 class="text-white text-6xl font-extrabold ml-10 mr-10 leading-tight">Welcome to Sudo!</h1>
+                <h1 class="text-white text-6xl font-extrabold ml-10 mr-10 leading-tight" id="title">Thankyou!</h1>
             </div>
 
             <div class="py-8 text-2xl">
-                <p class="text-base pb-2">
-                    Thanks for staying safe and registering your attendance to our event!
+                <p class="text-base pb-2" id="completion_text">
+                    Your form submission was successfully submitted.
                 </p>
-
-                <p class="text-base pb-2">
-                    If you haven't already, make sure you jump in on the action by joining our Discord and subscribing
-                    to the newsletter so you always have the latest information about our events.
-                </p>
-
-                <a href="https://sudouc.club/discord" target="_blank"><button type="button"
-                        class="mb-2 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Join the Discord
-                    </button></a>
-
-                <a href="https://sudouc.club/newsletter" target="_blank"><button type="button"
-                        class="mb-4 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Keep up-to-date with the Newsletter
-                    </button></a>
 
                 <p class="text-base pb-2 text-gray-500 font-semibold">
                     Enjoy,<br><a href="https://sudouc.club/#team" class="underline">The Sudo Committee</a>
@@ -102,3 +106,18 @@ layout: min
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    let urlParams = new URLSearchParams(window.location.search);
+
+    const title = decodeURI(urlParams.get('title'));
+    const message = decodeURI(urlParams.get('message'));
+
+    if (message != null && message != "null")
+        document.getElementById('completion_text').innerHTML = message;
+
+    if (title != null && title != "null")
+        document.getElementById('title').innerHTML = title;
+</script>
+</body>
+
+</html>
