@@ -8,7 +8,7 @@ layout: min
 <div class="bg-white py-8">
     <div id="formContainer" class="relative">
         <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Discord Membership Verification
+            2021 Semester 2 Member Preferences
         </h2>
         <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
             <div class="relative rounded-2xl px-6 py-10 overflow-hidden shadow-xl sm:px-12 sm:py-20">
@@ -18,22 +18,29 @@ layout: min
                     <div class="pt-4 space-y-6 sm:pt-5 sm:space-y-5">
                         <div>
                             <h3 class="text-lg leading-6 font-medium text-gray-900">
-                                Verify you Discord username
+                                Hey there,
                             </h3>
                             <p class="mt-1 max-w-2xl text-sm text-gray-500">
-                                Become a verified member on our <a href="/discord" target="_blank">members discord</a>
+                                Let us know the days that would best fit you for Sudo's weekly events, so we can best cater for everyone!<br>Events will start at 4:30PM unless you tell us you want otherwise!
                             </p>
                         </div>
                         <div class="space-y-6 sm:space-y-5">
-                            {% include forms/text_input.html id="Identifier" name="Email or Student Number"
+                            {% include forms/text_input.html id="Identifier" name="Student Number"
                             placeholder="u34567890" required=true %}
-                            {% include forms/text_input.html id="DiscordUser" name="Discord Username"
-                            placeholder="user#1024" required=true %}
+
+                            {% include forms/checkbox_input.html id="Monday" name="Monday" %}
+                            {% include forms/checkbox_input.html id="Tuesday" name="Tuesday" %}
+                            {% include forms/checkbox_input.html id="Wednesday" name="Wednesday" %}
+                            {% include forms/checkbox_input.html id="Thursday" name="Thursday" %}
+                            {% include forms/checkbox_input.html id="Friday" name="Friday" %}
+
+                            {% include forms/text_input.html id="OtherPref" name="Got anything else you want to mention?"
+                            placeholder="Let us know anything your after" required=false %}
 
 
                             <div style="display:none;">
                                 <input type="text" id="fsuid" name="fsuid" value="NULL">
-                                <input type="text" id="FormName" name="FormName" value="discord_verify">
+                                <input type="text" id="FormName" name="FormName" value="2021s2_prefs">
                             </div>
                         </div>
                     </div>
