@@ -65,7 +65,7 @@ jobs:
           author_email: github-actions@github.com
           push: true
           branch: main
-          message: 'Automatic build courtesy of Github (Sam and Jed are too lazy)'
+          message: 'Automatic build courtesy of GitHub (Sam and Jed are too lazy)'
       - name: Call
         uses: fabasoad/twilio-voice-call-action@main
         with:
