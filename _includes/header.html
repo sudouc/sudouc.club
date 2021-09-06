@@ -7,4 +7,10 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
   <link rel="shortcut icon" href="/favicon.ico" />
   {% include ganalytics.html %}
+  {% if page.ogimage %}
+  <meta property="og:image" content="{{ site.url }}{{ page.ogimage }}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="{{ page.ogimage_width }}">
+  <meta property="og:image:height" content="{{ page.ogimage_height }}">
+  {% endif %}
 </head>
