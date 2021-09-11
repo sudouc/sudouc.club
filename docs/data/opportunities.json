@@ -1,5 +1,11 @@
 {
     "version": "1.0.0",
     "opportunities": [
+        {
+            "end_date": "Sun, 31 Oct 2021 23:59:00 +1100",
+            "title": "ADF Cyber Gap Program",
+            "description": "The Department of Defence has partnered with the Digital Transformation Agency to provide expert career mentoring and work exposure while you complete your cyber studies — even if you’re already working. And there’s no service commitment! The Cyber Gap Program also offers 12 months of generous financial sponsorship, professional networking opportunities, and help to apply for ADF roles on completion.",
+            "link": "https://digitalprofession.gov.au/australian-defence-force-cyber-gap-program"
+        }
     ]
 }
