@@ -2,6 +2,12 @@
     "version": "1.0.0",
     "opportunities": [
         {
+            "end_date": "Sun, 24 Apr 2022 23:59:00 +1100",
+            "title": "2023 Indigenous Graduate Pathway",
+            "description": "The Indigenous Graduate Pathway provides a rewarding career in the Australian Public Service for recent Aboriginal and Torres Strait Islander tertiary graduates. We recruit on behalf of a large number of Australian Government agencies who are seeking a range of skillets and abilities. You apply once through our system and your application is assessed for all participating agencies – no need to complete multiple applications.",
+            "link": "https://www.indigenouscareers.gov.au"
+        },
+        {
             "end_date": "Sun, 31 Oct 2021 23:59:00 +1100",
             "title": "ADF Cyber Gap Program",
             "description": "The Department of Defence has partnered with the Digital Transformation Agency to provide expert career mentoring and work exposure while you complete your cyber studies — even if you’re already working. And there’s no service commitment! The Cyber Gap Program also offers 12 months of generous financial sponsorship, professional networking opportunities, and help to apply for ADF roles on completion.",
