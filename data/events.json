@@ -1,0 +1,202 @@
+{
+    "version": "1.0.0",
+    "events": [
+        {
+            "start_date": "Thu, 17 Mar 2022 18:00:00 +1100",
+            "title": "Technology Industry Panel",
+            "description": "Join UC Supporting Women in STEM, UC Engineering Society, and UC SUDO in our Annual Technology Panel featuring experts from Robotics, Cloud Computing, Cyber Security, and Data Science.",
+            "location": "Ann Harding Center",
+            "tag_name": "Event",
+            "tag_color": "yellow",
+            "link": "https://www.facebook.com/events/465858131614397"
+        },
+        {
+            "start_date": "Fri, 01 Apr 2022 12:30:00 +1100",
+            "title": "Private Zoo Tour & Lunch",
+            "description": "Join UC Supporting Women in STEM (UCSWIS), UC Galleries, Libraries, and Museums (UCGLAMS), and SUDO with a private Zoo tour and Pizza lunch during the Mid-Semester break! Our private tour will include one-on-one time with a Zookeeper as well as some reptile handling followed by unlimited use of the zoo and a pizza lunch!",
+            "location": "National Zoo & Aquarium Canberra",
+            "tag_name": "Event",
+            "tag_color": "yellow",
+            "link": "https://www.facebook.com/events/2152077231635002"
+        },
+        {
+            "start_date": "Fri, 20 May 2022 18:00:00 +1000",
+            "title": "END-OF-SEMESTER LASER TAG",
+            "description": "Join UC Supporting Women in STEM, SUDO, and the Engineering Society as we celebrate the end of Semester One with Laser Tag and Pizza!",
+            "location": "Zone 3 Canberra",
+            "tag_name": "Event",
+            "tag_color": "yellow",
+            "link": "https://www.facebook.com/events/663085718057345"
+        },
+
+        {
+            "link": null,
+            "start_date": "Tue, 08 Feb 2022 12:30:00 +1100",
+            "tag_name": "Event",
+            "tag_color": "yellow",
+            "title": "Sudo @ Market Day!",
+            "description": "Come and say hi at the first UC Market Day of the year!"
+        },
+        {
+            "link": null,
+            "start_date": "Tue, 15 Feb 2022 18:00:00 +1100",
+            "tag_name": "UCSWIS",
+            "tag_color": "green",
+            "title": "Clubs Day Movie Night",
+            "description": "Join UCSWIS, SUDO and UCES for the Clubs Day movie night! Featuring a Turkish Feast, Popcorn, and Legally Blonde!"
+        },
+        {
+            "link": null,
+            "start_date": "Thu, 17 Feb 2022 17:30:00 +1100",
+            "tag_name": "Event",
+            "tag_color": "green",
+            "title": "Hello, Sudo!",
+            "description": "Come and meet the Sudo team and fellow members! Co-Hosted with Engineering Society. Pide provided!"
+        },
+        {
+            "link": "https://fb.me/e/2d2p98L9j",
+            "start_date": "Fri, 18 Feb 2022 18:00:00 +1100",
+            "tag_name": "Event",
+            "tag_color": "green",
+            "title": "Questacon Private Tour",
+            "description": "Join us from a private tour of questacon (including dinner!) Booking Essential!"
+        },
+        {
+            "link": "https://github.com/sudouc/House-of-Cards",
+            "start_date": null,
+            "tag_name": "Byte Sized",
+            "tag_color": "purple",
+            "title": "House of Cards",
+            "description": "What's going on inside your student card? Learn about the world of NFC, how it works, and how to break it. But whatever you do, don't give Jed your card..."
+        },
+        {
+            "link": null,
+            "start_date": null,
+            "tag_name": "Ball",
+            "tag_color": "blue",
+            "title": "UC Tech Ball",
+            "description": "End the year on a high with all your faviourite SciTech clubs. Delayed due to lockdown, stay tuned for updates!"
+        },
+
+        {
+            "link": "//sudouc.club/agm/2022/",
+            "start_date": "Tue, 30 Nov 2021 18:00:00 +1000",
+            "tag_name": "AGM",
+            "tag_color": "yellow",
+            "title": "2022 AGM",
+            "description": "Have your say on team that runs UC's Premiere Development and Coding Society"
+        },
+        {
+            "link": "https://www.facebook.com/events/216629583932689",
+            "start_date": "Sat, 11 Dec 2021 18:00:00 +1000",
+            "tag_name": "Collab",
+            "tag_color": "green",
+            "title": "SciTech Picnic",
+            "description": "Come celebrate the end of the year with UC Supporting Women in STEM (UCSWIS), SUDO, the Engineering Society, UC Biomedical and Medical Science Society (BAMSS), Canberra Forensics Students Association (CFSA), and the Psychology Society!"
+        },
+        {
+            "link": "//sudouc.club/discord",
+            "start_date": "Thu, 07 Oct 2021 18:00:00 +1000",
+            "tag_name": "Projects & Pizza-less",
+            "tag_color": "yellow",
+            "title": "Project & Pizza-less",
+            "description": "Hang out with Sudo to showoffsomething you've created, discover a new passion project. We'll be riding out this lockdown together in theDiscord."
+        },
+        {
+            "link": "/startup",
+            "start_date": "Wed, 08 Sep 2021 18:30:00 +1000",
+            "tag_name": "UCSWIS & Co.",
+            "tag_color": "green",
+            "title": "Start-up Panel",
+            "description": "UC Supporting Women in STEM, UCEngineering Society, and SUDO are thrilled to invite you to our latest Industry Panel featuringrepresentatives from a range of backgrounds currently working in the start-up industry!"
+        },
+        {
+            "link": "#",
+            "start_date": "Thu, 05 Aug 2021 16:30:00 +1000",
+            "tag_name": "Event",
+            "tag_color": "green",
+            "title": "Semester 2 Welcome",
+            "description": "Join us in getting ready for another semester. Free food included 🍕"
+        },
+        {
+            "link": "#",
+            "start_date": "Wed, 24 Mar 2021 16:30:00 +1000",
+            "tag_name": "Byte Sized",
+            "tag_color": "purple",
+            "title": "Byte Sized: I Spy",
+            "description": "Building a GUI or a game is one thing, but there's awhole complex world of technology that handles how the things you build are actually being displayed. Whoa,dude, I think I'm seeing thing..."
+        },
+        {
+            "link": "#",
+            "start_date": "Thu, 01 Apr 2021 16:30:00 +1000",
+            "tag_name": "Projects & Pizza",
+            "tag_color": "yellow",
+            "title": "Project & Pizza",
+            "description": "Hang out with Sudo to show offsomething you've created, discover a new passion project or just to enjoy some Pizza!"
+        },
+        {
+            "link": "#",
+            "start_date": "Thu, 11 Mar 2021 16:30:00 +1000",
+            "tag_name": "Byte Sized",
+            "tag_color": "purple",
+            "title": "Byte Sized: Divide & Conquer",
+            "description": "You've probably heard the words'Containerization' or 'Docker' floating around, but these containers aren't your grandma's tuppaware. "
+        },
+        {
+            "link": "#",
+            "start_date": "Thu, 18 Mar 2021 16:30:00 +1000",
+            "tag_name": "Projects & Pizza",
+            "tag_color": "yellow",
+            "title": "Project & Pizza",
+            "description": "Hang out with Sudo to show offsomething you've created, discover a new passion project or just to enjoy some Pizza!"
+        },
+        {
+            "link": "#",
+            "start_date": "Thu, 04 Mar 2021 16:30:00 +1000",
+            "tag_name": "Projects & Pizza",
+            "tag_color": "yellow",
+            "title": "Project & Pizza",
+            "description": "Hang out with Sudo to show offsomething you've created, discover a new passion project or just to enjoy some Pizza!"
+        },
+        {
+            "link": "#",
+            "start_date": "Thu, 25 Feb 2021 16:30:00 +1000",
+            "tag_name": "Byte Sized",
+            "tag_color": "purple",
+            "title": "Byte Sized: WTF is Git?",
+            "description": "An in-depth look into Git and it's role in adevelopers toolbox. From the GUI to the Command Line, Sudo will take you through everything you need to knowto use Git like a pro."
+        },
+        {
+            "link": "#",
+            "start_date": "Wed, 24 Feb 2021 18:00:00 +1000",
+            "tag_name": "Collab",
+            "tag_color": "green",
+            "title": "Technology Industry Panel",
+            "description": "Come and meet some professionals from the industry and learn about some of the majors you could choose as part of your degree."
+        },
+        {
+            "link": "#",
+            "start_date": "Thu, 18 Feb 2021 16:30:00 +1000",
+            "tag_name": "Projects & Pizza",
+            "tag_color": "yellow",
+            "title": "Project & Pizza",
+            "description": "Hang out with Sudo to show offsomething you've created, discover a new passion project or just to enjoy some Pizza!"
+        },
+        {
+            "link": "#",
+            "start_date": "Thu, 11 Feb 2021 16:30:00 +1000",
+            "tag_name": "Byte Sized",
+            "tag_color": "purple",
+            "title": "Byte Sized: The Essentials",
+            "description": "Discover the essential tools you willrequire as a developer and discover neat tricks you can used everywhere. We'll be uncovering the mysteries of Git and how to set up VSCode for your daily works.<br><br>Oh and the Engineering Society will be theretoo..."
+        },
+        {
+            "link": "#",
+            "tag_name": "Event",
+            "tag_color": "indigo",
+            "title": "Hello Sudo",
+            "start_date": "Thu, 04 Feb 2021 16:30:00 +1000",
+            "description": "Our 2021 welcome event! Thanks to all that attended."
+        }
+    ]
+}
