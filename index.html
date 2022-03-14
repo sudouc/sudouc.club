@@ -62,7 +62,7 @@ layout: default
                             This week
                         </span>
                         <span class="inline-flex items-center text-sm font-medium text-indigo-600 space-x-1">
-                            <span>Lockdown with Sudo</span>
+                            <span class="events_this_week">Lockdown with Sudo</span>
                             <!-- Heroicon name: chevron-right -->
                             <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                                 fill="currentColor" aria-hidden="true">
@@ -279,3 +279,14 @@ layout: default
 <!-- END: FAQ -->
 
 {% include scitech_societies.html %}
+
+<script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
+<script src="/events/load_events.js"></script>
+<script type="text/javascript">
+getEvents().then(events => {
+    // Poster
+    setPosterNextEvent(events.next_event.formatted);
+    document.querySelectorAll('.events_this_week')[0].innerHTML = events.next_event.formatted.title;
+});
+
+</script>
