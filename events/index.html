@@ -90,7 +90,7 @@ getEvents().then(events => {
         setAttr('.ec_title', event.formatted.title);
 
         // setAttr('.ec_link', event.formatted.link);
-        clone.querySelectorAll('.ec_link')[0].href = event.formatted.link;
+        clone.querySelectorAll('.ec_link').forEach((e) => e.href = event.formatted.link);
         clone.querySelectorAll('.ec_type')[0].className += ` bg-${event.formatted.tag_color}-100 text-${event.formatted.tag_color}-800`;
         setAttr('.ec_type', event.formatted.tag_name)
 
