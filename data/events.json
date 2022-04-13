@@ -2,6 +2,26 @@
     "version": "1.0.0",
     "events": [
         {
+            "start_date": "Fri, 01 Apr 2022 00:00:00 +1000",
+            "end_date": "Sat, 31 Dec 2022 00:00:00 +1000",
+            "title": "Microsoft Student Accelerator",
+            "description": "Develop the business and technical skills you need to land yourself a career in tech! Over the course of the year, you’ll be participating in a range of workshops, case cracks, and even international competitions to unlock your capabilities in industry.",
+            "location": "Online",
+            "tag_name": "Event",
+            "tag_color": "yellow",
+            "link": "https://www.microsoft.com/en-au/business/learn/cloud-training-events/cloud-skills-challenge-events/msa/"
+        },
+        {
+            "start_date": "Mon, 18 Apr 2022 00:00:00 +1000",
+            "end_date": "Wed, 11 May 2022 00:00:00 +1000",
+            "title": "Microsoft Protégé",
+            "description": "Protégé is Microsoft’s annual case competition, offering students an opportunity to tackle a real-world business challenge by creating innovative solutions that create a lasting impact.",
+            "location": "Online",
+            "tag_name": "Event",
+            "tag_color": "yellow",
+            "link": "https://www.microsoft.com/en-au/protege/"
+        },
+        {
             "start_date": "Thu, 17 Mar 2022 18:00:00 +1100",
             "title": "Technology Industry Panel",
             "description": "Join UC Supporting Women in STEM, UC Engineering Society, and UC SUDO in our Annual Technology Panel featuring experts from Robotics, Cloud Computing, Cyber Security, and Data Science.",
