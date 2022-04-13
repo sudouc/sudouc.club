@@ -199,7 +199,7 @@ var template = document.querySelector('#event_card');
 getEvents().then(events => {
     let appendEvent = (parent, event) => {
         var clone = template.content.cloneNode(true);
-        let setAttr = (attr, content) => clone.querySelectorAll(attr)[0].innerHTML = content;
+        let setAttr = (attr, content) => clone.querySelectorAll(attr).forEach((e) => e.innerHTML = content);
 
         setAttr('.ec_description', event.formatted.description);
         setAttr('.ec_when', event.formatted.start_date);
