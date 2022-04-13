@@ -9,6 +9,7 @@
             "location": "Online",
             "tag_name": "Event",
             "tag_color": "blue",
+            "showcase": true,
             "link": "https://www.microsoft.com/en-au/business/learn/cloud-training-events/cloud-skills-challenge-events/msa/"
         },
         {
@@ -19,6 +20,7 @@
             "location": "Online",
             "tag_name": "Event",
             "tag_color": "blue",
+            "showcase": true,
             "link": "https://www.microsoft.com/en-au/protege/"
         },
         {

@@ -39,6 +39,8 @@ function getEvents() {
                     // process
                     event.location = event.location ?? "TBD";
                     event.link = event.link ?? "#";
+                    event.showcase = event.showcase ?? false;
+
                     let formattedEvent = {
                         "start_date": humanReadableTime(startDate) ?? "Coming soon...", // @todo human format start date
                         "end_date": humanReadableTime(endDate) ?? "UNK",
@@ -80,8 +82,9 @@ function getEvents() {
                 ret.past_events.sort((a, b) => sortFunc(a, b, false));
                 ret.upcomming_events.sort((a, b) => sortFunc(a, b, true));
 
-                // Get next/ current event
-                ret.next_event = ret.upcomming_events[0] ?? null;
+                // Get next/ current event that isn't a showcase event (i.e. hidden from banner)
+                // ret.next_event = ret.upcomming_events[0] ?? null;
+                ret.next_event = getNextActualEvent(ret.upcomming_events);
 
                 resolve(ret);
             })
@@ -97,6 +100,19 @@ function getEvents() {
             })
             ;
     });
+}
+
+// Get the next non-showcase event
+function getNextActualEvent(events) {
+    let nextEvent = null;
+    for(let _event of events) {
+        if(! _event.raw.showcase) {
+            nextEvent = _event;
+            break;
+        }
+    }
+
+    return nextEvent;
 }
 
 // let returnSchema = {
