@@ -2,6 +2,17 @@
     "version": "1.0.0",
     "events": [
          {
+            "start_date": "Tue, 13 Sep 2022 17:00:00 +1000",
+            "end_date": "Tue, 13 Sep 2022 19:00:00 +1000",
+            "title": "Microsoft Student Accelerator Networking Event",
+            "description": "The event is catered! Attend to get Microsoft and MSA merch! The Microsoft Student Accelerator networking event consists of a panel session and a speed networking session where you can meet various Microsoft employees to ask questions for your future careers after university.",
+            "location": "4/6 National Circuit, Barton ACT 2600",
+            "tag_name": "Event",
+            "tag_color": "blue",
+            "showcase": true,
+            "link": "https://www.eventbrite.com.au/e/microsoft-student-accelerator-networking-event-h2-canberra-tickets-405976405357"
+         },
+         {
             "start_date": "Tue, 14 Jun 2022 17:00:00 +1000",
             "end_date": "Tue, 14 Jun 2022 19:00:00 +1000",
             "title": "Microsoft Student Accelerator Networking Event",
